@@ -6,6 +6,6 @@ class City < ActiveRecord::Base
               if: lambda { |city| city.state == 'CO' },
               message: 'is too low, the lowest elevation in Colorado is 3,315 feet'
             }
-   validates :name, presence: { message: "Go away" }
+   validates :name, :population, :elevation, :state,  presence: { message: "Fields highlighted in red are required." }
 
 end
