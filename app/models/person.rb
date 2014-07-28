@@ -3,5 +3,4 @@ class Person < ActiveRecord::Base
   validates :first_name, :last_name, :address_line_one, :city, :state, :zip_code,  presence: true
   validates :email, presence: true, uniqueness: true, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/ }
   validates :zip_code, length: { in: 5..10 }
-
 end
